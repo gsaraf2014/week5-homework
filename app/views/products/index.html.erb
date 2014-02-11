@@ -2,15 +2,15 @@
   <h1>Product Catalog</h1>
 </div>
 
-<% @product_list.each do |product| %>
+<% @book_list.each do |this_book| %>
   <div class="row">
     <div class="col-md-4">
-      <a href="/products/show"><img src="http://images.apple.com/iphone-5s/specs/images/color_gray.jpg"></a>
+      <a href="/products/show"><img src= <%=this_book.image_url %> width=300></a>
     </div>
     <div class="col-md-8">
-      <h3><a href="/products/show">iPhone 5s</a></h3>
-      <p class="lead">$299</p>
-      <p>A chip with 64-bit architecture. A fingerprint identity sensor. A better, faster camera. And an operating system built specifically for 64-bit. Any one of these features in a smartphone would make it ahead of its time. All of these features in a smartphone make it an iPhone that’s definitely ahead of its time.</p>
+      <h3><a href="/products/show"><%= this_book.name%></a></h3>
+      <p class="lead"></p>
+      <p><%=this_book.desc %></p>
     </div>
   </div>
 <% end %>
